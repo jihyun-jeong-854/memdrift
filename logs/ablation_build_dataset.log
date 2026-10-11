@@ -1,0 +1,367 @@
+rewrite (ecommerce):   0%|          | 0/34 [00:00<?, ?it/s]rewrite (ecommerce):   3%|▎         | 1/34 [00:02<01:16,  2.32s/it]rewrite (ecommerce):  24%|██▎       | 8/34 [00:02<00:05,  4.45it/s]rewrite (ecommerce):  35%|███▌      | 12/34 [00:02<00:04,  5.46it/s]rewrite (ecommerce):  50%|█████     | 17/34 [00:03<00:02,  8.21it/s]rewrite (ecommerce):  59%|█████▉    | 20/34 [00:03<00:01,  8.87it/s]rewrite (ecommerce):  71%|███████   | 24/34 [00:03<00:00, 11.85it/s]rewrite (ecommerce):  79%|███████▉  | 27/34 [00:03<00:00, 13.18it/s]rewrite (ecommerce):  88%|████████▊ | 30/34 [00:03<00:00, 13.15it/s]rewrite (ecommerce):  97%|█████████▋| 33/34 [00:04<00:00, 14.08it/s]                                                                    neutrals (ecommerce/scenario_1):   0%|          | 0/45 [00:00<?, ?it/s]
+neutrals (ecommerce/scenario_2):   0%|          | 0/45 [00:00<?, ?it/s][A
+
+neutrals (ecommerce/scenario_3):   0%|          | 0/45 [00:00<?, ?it/s][A[Aneutrals (ecommerce/scenario_1):   2%|▏         | 1/45 [00:00<00:24,  1.83it/s]neutrals (ecommerce/scenario_1):  18%|█▊        | 8/45 [00:00<00:02, 15.68it/s]neutrals (ecommerce/scenario_1):  27%|██▋       | 12/45 [00:01<00:02, 11.68it/s]neutrals (ecommerce/scenario_1):  38%|███▊      | 17/45 [00:01<00:01, 16.54it/s]neutrals (ecommerce/scenario_1):  44%|████▍     | 20/45 [00:01<00:01, 18.07it/s]neutrals (ecommerce/scenario_1):  51%|█████     | 23/45 [00:01<00:01, 13.88it/s]neutrals (ecommerce/scenario_1):  58%|█████▊    | 26/45 [00:01<00:01, 15.60it/s]neutrals (ecommerce/scenario_1):  64%|██████▍   | 29/45 [00:02<00:00, 16.49it/s]neutrals (ecommerce/scenario_1):  71%|███████   | 32/45 [00:02<00:00, 14.99it/s]neutrals (ecommerce/scenario_1):  80%|████████  | 36/45 [00:02<00:00, 17.82it/s]neutrals (ecommerce/scenario_1):  87%|████████▋ | 39/45 [00:02<00:00, 16.75it/s]neutrals (ecommerce/scenario_1):  91%|█████████ | 41/45 [00:02<00:00, 14.67it/s]
+neutrals (ecommerce/scenario_2):   2%|▏         | 1/45 [00:02<02:09,  2.94s/it][Aneutrals (ecommerce/scenario_1):  98%|█████████▊| 44/45 [00:02<00:00, 15.12it/s]                                                                                
+neutrals (ecommerce/scenario_2):   7%|▋         | 3/45 [00:03<00:33,  1.24it/s][A
+neutrals (ecommerce/scenario_2):  11%|█         | 5/45 [00:03<00:18,  2.14it/s][A
+neutrals (ecommerce/scenario_2):  16%|█▌        | 7/45 [00:03<00:11,  3.34it/s][A
+neutrals (ecommerce/scenario_2):  24%|██▍       | 11/45 [00:03<00:05,  6.35it/s][A
+neutrals (ecommerce/scenario_2):  33%|███▎      | 15/45 [00:03<00:03,  8.50it/s][A
+neutrals (ecommerce/scenario_2):  38%|███▊      | 17/45 [00:04<00:03,  9.22it/s][A
+neutrals (ecommerce/scenario_2):  47%|████▋     | 21/45 [00:04<00:01, 13.24it/s][A
+neutrals (ecommerce/scenario_2):  53%|█████▎    | 24/45 [00:04<00:01, 14.47it/s][A
+neutrals (ecommerce/scenario_2):  60%|██████    | 27/45 [00:04<00:01, 12.95it/s][A
+neutrals (ecommerce/scenario_2):  67%|██████▋   | 30/45 [00:04<00:00, 15.46it/s][A
+neutrals (ecommerce/scenario_2):  73%|███████▎  | 33/45 [00:04<00:00, 17.13it/s][A
+neutrals (ecommerce/scenario_2):  80%|████████  | 36/45 [00:05<00:00, 14.42it/s][A
+neutrals (ecommerce/scenario_2):  89%|████████▉ | 40/45 [00:05<00:00, 16.30it/s][A
+neutrals (ecommerce/scenario_2):  96%|█████████▌| 43/45 [00:05<00:00, 17.68it/s][A
+
+neutrals (ecommerce/scenario_3):   2%|▏         | 1/45 [00:05<04:11,  5.71s/it][A[A
+                                                                                [A
+
+neutrals (ecommerce/scenario_3):   9%|▉         | 4/45 [00:05<00:45,  1.11s/it][A[A
+
+neutrals (ecommerce/scenario_3):  13%|█▎        | 6/45 [00:05<00:25,  1.53it/s][A[A
+
+neutrals (ecommerce/scenario_3):  18%|█▊        | 8/45 [00:06<00:16,  2.31it/s][A[A
+
+neutrals (ecommerce/scenario_3):  22%|██▏       | 10/45 [00:06<00:10,  3.21it/s][A[A
+
+neutrals (ecommerce/scenario_3):  36%|███▌      | 16/45 [00:06<00:04,  6.42it/s][A[A
+
+neutrals (ecommerce/scenario_3):  42%|████▏     | 19/45 [00:06<00:03,  8.14it/s][A[A
+
+neutrals (ecommerce/scenario_3):  47%|████▋     | 21/45 [00:06<00:02,  9.27it/s][A[A
+
+neutrals (ecommerce/scenario_3):  53%|█████▎    | 24/45 [00:06<00:01, 11.66it/s][A[A
+
+neutrals (ecommerce/scenario_3):  58%|█████▊    | 26/45 [00:07<00:01, 12.60it/s][A[A
+
+neutrals (ecommerce/scenario_3):  62%|██████▏   | 28/45 [00:07<00:01, 13.83it/s][A[A
+
+neutrals (ecommerce/scenario_3):  69%|██████▉   | 31/45 [00:07<00:01, 13.32it/s][A[A
+
+neutrals (ecommerce/scenario_3):  78%|███████▊  | 35/45 [00:07<00:00, 18.00it/s][A[A
+
+neutrals (ecommerce/scenario_3):  84%|████████▍ | 38/45 [00:07<00:00, 16.03it/s][A[A
+
+neutrals (ecommerce/scenario_3):  91%|█████████ | 41/45 [00:07<00:00, 17.05it/s][A[A
+
+neutrals (ecommerce/scenario_3):  98%|█████████▊| 44/45 [00:08<00:00, 17.43it/s][A[A
+
+                                                                                [A[Arewrite (education):   0%|          | 0/36 [00:00<?, ?it/s]rewrite (education):   3%|▎         | 1/36 [00:00<00:17,  1.97it/s]rewrite (education):  11%|█         | 4/36 [00:00<00:04,  7.94it/s]rewrite (education):  28%|██▊       | 10/36 [00:00<00:01, 18.01it/s]rewrite (education):  36%|███▌      | 13/36 [00:01<00:01, 12.47it/s]rewrite (education):  44%|████▍     | 16/36 [00:01<00:01, 14.81it/s]rewrite (education):  56%|█████▌    | 20/36 [00:01<00:01, 14.60it/s]rewrite (education):  61%|██████    | 22/36 [00:01<00:00, 14.28it/s]rewrite (education):  69%|██████▉   | 25/36 [00:01<00:00, 16.24it/s]rewrite (education):  78%|███████▊  | 28/36 [00:02<00:00, 15.01it/s]rewrite (education):  86%|████████▌ | 31/36 [00:02<00:00, 17.59it/s]rewrite (education):  94%|█████████▍| 34/36 [00:02<00:00, 15.92it/s]rewrite (education): 100%|██████████| 36/36 [00:02<00:00, 13.59it/s]                                                                    neutrals (education/scenario_1):   0%|          | 0/45 [00:00<?, ?it/s]
+neutrals (education/scenario_2):   0%|          | 0/45 [00:00<?, ?it/s][A
+
+neutrals (education/scenario_3):   0%|          | 0/45 [00:00<?, ?it/s][A[Aneutrals (education/scenario_1):   2%|▏         | 1/45 [00:00<00:21,  2.09it/s]neutrals (education/scenario_1):  22%|██▏       | 10/45 [00:00<00:01, 22.11it/s]neutrals (education/scenario_1):  36%|███▌      | 16/45 [00:01<00:01, 17.25it/s]neutrals (education/scenario_1):  44%|████▍     | 20/45 [00:01<00:01, 14.73it/s]neutrals (education/scenario_1):  53%|█████▎    | 24/45 [00:01<00:01, 17.88it/s]neutrals (education/scenario_1):  64%|██████▍   | 29/45 [00:01<00:00, 22.72it/s]neutrals (education/scenario_1):  73%|███████▎  | 33/45 [00:01<00:00, 17.87it/s]neutrals (education/scenario_1):  84%|████████▍ | 38/45 [00:02<00:00, 21.57it/s]neutrals (education/scenario_1):  91%|█████████ | 41/45 [00:02<00:00, 17.42it/s]neutrals (education/scenario_1): 100%|██████████| 45/45 [00:02<00:00, 19.95it/s]                                                                                
+neutrals (education/scenario_2):   2%|▏         | 1/45 [00:02<01:57,  2.67s/it][A
+neutrals (education/scenario_2):   9%|▉         | 4/45 [00:02<00:22,  1.85it/s][A
+neutrals (education/scenario_2):  13%|█▎        | 6/45 [00:03<00:14,  2.77it/s][A
+neutrals (education/scenario_2):  22%|██▏       | 10/45 [00:03<00:06,  5.55it/s][A
+neutrals (education/scenario_2):  27%|██▋       | 12/45 [00:03<00:05,  6.50it/s][A
+neutrals (education/scenario_2):  31%|███       | 14/45 [00:03<00:03,  7.77it/s][A
+neutrals (education/scenario_2):  36%|███▌      | 16/45 [00:03<00:03,  7.49it/s][A
+neutrals (education/scenario_2):  42%|████▏     | 19/45 [00:03<00:02, 10.40it/s][A
+neutrals (education/scenario_2):  47%|████▋     | 21/45 [00:04<00:02, 10.35it/s][A
+neutrals (education/scenario_2):  56%|█████▌    | 25/45 [00:04<00:01, 13.32it/s][A
+neutrals (education/scenario_2):  60%|██████    | 27/45 [00:04<00:01, 11.41it/s][A
+neutrals (education/scenario_2):  69%|██████▉   | 31/45 [00:04<00:01, 12.45it/s][A
+neutrals (education/scenario_2):  76%|███████▌  | 34/45 [00:04<00:00, 13.96it/s][A
+neutrals (education/scenario_2):  80%|████████  | 36/45 [00:05<00:00, 13.00it/s][A
+neutrals (education/scenario_2):  89%|████████▉ | 40/45 [00:05<00:00, 17.37it/s][A
+neutrals (education/scenario_2):  96%|█████████▌| 43/45 [00:05<00:00, 14.43it/s][A
+neutrals (education/scenario_2): 100%|██████████| 45/45 [00:05<00:00, 14.92it/s][A
+                                                                                [A
+
+neutrals (education/scenario_3):   2%|▏         | 1/45 [00:05<04:11,  5.71s/it][A[A
+
+neutrals (education/scenario_3):   7%|▋         | 3/45 [00:05<01:04,  1.54s/it][A[A
+
+neutrals (education/scenario_3):  11%|█         | 5/45 [00:05<00:31,  1.29it/s][A[A
+
+neutrals (education/scenario_3):  16%|█▌        | 7/45 [00:06<00:17,  2.12it/s][A[A
+
+neutrals (education/scenario_3):  20%|██        | 9/45 [00:06<00:11,  3.17it/s][A[A
+
+neutrals (education/scenario_3):  27%|██▋       | 12/45 [00:06<00:06,  4.98it/s][A[A
+
+neutrals (education/scenario_3):  33%|███▎      | 15/45 [00:06<00:04,  6.99it/s][A[A
+
+neutrals (education/scenario_3):  38%|███▊      | 17/45 [00:06<00:03,  8.23it/s][A[A
+
+neutrals (education/scenario_3):  44%|████▍     | 20/45 [00:06<00:02, 10.82it/s][A[A
+
+neutrals (education/scenario_3):  49%|████▉     | 22/45 [00:06<00:02, 11.09it/s][A[A
+
+neutrals (education/scenario_3):  53%|█████▎    | 24/45 [00:07<00:01, 11.27it/s][A[A
+
+neutrals (education/scenario_3):  62%|██████▏   | 28/45 [00:07<00:01, 15.11it/s][A[A
+
+neutrals (education/scenario_3):  69%|██████▉   | 31/45 [00:07<00:00, 17.72it/s][A[A
+
+neutrals (education/scenario_3):  76%|███████▌  | 34/45 [00:07<00:00, 12.97it/s][A[A
+
+neutrals (education/scenario_3):  84%|████████▍ | 38/45 [00:07<00:00, 15.55it/s][A[A
+
+neutrals (education/scenario_3):  89%|████████▉ | 40/45 [00:08<00:00, 13.88it/s][A[A
+
+neutrals (education/scenario_3):  93%|█████████▎| 42/45 [00:08<00:00, 14.37it/s][A[A
+
+                                                                                [A[Arewrite (finance):   0%|          | 0/34 [00:00<?, ?it/s]rewrite (finance):   3%|▎         | 1/34 [00:00<00:16,  1.96it/s]rewrite (finance):  24%|██▎       | 8/34 [00:00<00:01, 16.18it/s]rewrite (finance):  35%|███▌      | 12/34 [00:01<00:01, 11.77it/s]rewrite (finance):  56%|█████▌    | 19/34 [00:01<00:00, 18.30it/s]rewrite (finance):  65%|██████▍   | 22/34 [00:01<00:00, 14.62it/s]rewrite (finance):  79%|███████▉  | 27/34 [00:01<00:00, 18.44it/s]rewrite (finance):  88%|████████▊ | 30/34 [00:01<00:00, 17.45it/s]rewrite (finance):  97%|█████████▋| 33/34 [00:02<00:00, 15.89it/s]                                                                  neutrals (finance/scenario_1):   0%|          | 0/45 [00:00<?, ?it/s]
+neutrals (finance/scenario_2):   0%|          | 0/45 [00:00<?, ?it/s][A
+
+neutrals (finance/scenario_3):   0%|          | 0/45 [00:00<?, ?it/s][A[Aneutrals (finance/scenario_1):   2%|▏         | 1/45 [00:00<00:24,  1.77it/s]neutrals (finance/scenario_1):  18%|█▊        | 8/45 [00:00<00:02, 15.03it/s]neutrals (finance/scenario_1):  27%|██▋       | 12/45 [00:01<00:02, 12.06it/s]neutrals (finance/scenario_1):  36%|███▌      | 16/45 [00:01<00:01, 16.31it/s]neutrals (finance/scenario_1):  44%|████▍     | 20/45 [00:01<00:01, 14.23it/s]neutrals (finance/scenario_1):  51%|█████     | 23/45 [00:01<00:01, 15.71it/s]neutrals (finance/scenario_1):  62%|██████▏   | 28/45 [00:01<00:00, 21.34it/s]neutrals (finance/scenario_1):  71%|███████   | 32/45 [00:02<00:00, 16.11it/s]neutrals (finance/scenario_1):  82%|████████▏ | 37/45 [00:02<00:00, 20.32it/s]neutrals (finance/scenario_1):  89%|████████▉ | 40/45 [00:02<00:00, 15.46it/s]neutrals (finance/scenario_1):  96%|█████████▌| 43/45 [00:02<00:00, 17.04it/s]                                                                              
+neutrals (finance/scenario_2):   2%|▏         | 1/45 [00:02<02:06,  2.89s/it][A
+neutrals (finance/scenario_2):  11%|█         | 5/45 [00:03<00:20,  1.98it/s][A
+neutrals (finance/scenario_2):  18%|█▊        | 8/45 [00:03<00:10,  3.51it/s][A
+neutrals (finance/scenario_2):  27%|██▋       | 12/45 [00:03<00:05,  6.15it/s][A
+neutrals (finance/scenario_2):  33%|███▎      | 15/45 [00:03<00:04,  7.12it/s][A
+neutrals (finance/scenario_2):  40%|████      | 18/45 [00:03<00:02,  9.06it/s][A
+neutrals (finance/scenario_2):  51%|█████     | 23/45 [00:04<00:01, 13.62it/s][A
+neutrals (finance/scenario_2):  58%|█████▊    | 26/45 [00:04<00:01, 12.84it/s][A
+neutrals (finance/scenario_2):  64%|██████▍   | 29/45 [00:04<00:01, 13.88it/s][A
+neutrals (finance/scenario_2):  73%|███████▎  | 33/45 [00:04<00:00, 15.58it/s][A
+neutrals (finance/scenario_2):  78%|███████▊  | 35/45 [00:04<00:00, 15.51it/s][A
+neutrals (finance/scenario_2):  82%|████████▏ | 37/45 [00:04<00:00, 15.53it/s][A
+neutrals (finance/scenario_2):  89%|████████▉ | 40/45 [00:05<00:00, 16.69it/s][A
+neutrals (finance/scenario_2):  96%|█████████▌| 43/45 [00:05<00:00, 16.17it/s][A
+
+neutrals (finance/scenario_3):   2%|▏         | 1/45 [00:05<03:54,  5.32s/it][A[A
+                                                                              [A
+
+neutrals (finance/scenario_3):   7%|▋         | 3/45 [00:05<01:00,  1.45s/it][A[A
+
+neutrals (finance/scenario_3):  13%|█▎        | 6/45 [00:05<00:23,  1.68it/s][A[A
+
+neutrals (finance/scenario_3):  20%|██        | 9/45 [00:05<00:12,  3.00it/s][A[A
+
+neutrals (finance/scenario_3):  24%|██▍       | 11/45 [00:05<00:08,  3.88it/s][A[A
+
+neutrals (finance/scenario_3):  33%|███▎      | 15/45 [00:06<00:04,  6.33it/s][A[A
+
+neutrals (finance/scenario_3):  38%|███▊      | 17/45 [00:06<00:03,  7.02it/s][A[A
+
+neutrals (finance/scenario_3):  44%|████▍     | 20/45 [00:06<00:02,  9.36it/s][A[A
+
+neutrals (finance/scenario_3):  49%|████▉     | 22/45 [00:06<00:02, 10.51it/s][A[A
+
+neutrals (finance/scenario_3):  53%|█████▎    | 24/45 [00:06<00:01, 10.68it/s][A[A
+
+neutrals (finance/scenario_3):  58%|█████▊    | 26/45 [00:06<00:01, 11.54it/s][A[A
+
+neutrals (finance/scenario_3):  62%|██████▏   | 28/45 [00:07<00:01, 11.97it/s][A[A
+
+neutrals (finance/scenario_3):  73%|███████▎  | 33/45 [00:07<00:00, 18.25it/s][A[A
+
+neutrals (finance/scenario_3):  80%|████████  | 36/45 [00:07<00:00, 14.57it/s][A[A
+
+neutrals (finance/scenario_3):  89%|████████▉ | 40/45 [00:07<00:00, 17.76it/s][A[A
+
+neutrals (finance/scenario_3):  96%|█████████▌| 43/45 [00:07<00:00, 18.20it/s][A[A
+
+                                                                              [A[Arewrite (healthcare):   0%|          | 0/36 [00:00<?, ?it/s]rewrite (healthcare):   3%|▎         | 1/36 [00:00<00:16,  2.13it/s]rewrite (healthcare):  14%|█▍        | 5/36 [00:00<00:02, 10.98it/s]rewrite (healthcare):  25%|██▌       | 9/36 [00:00<00:01, 17.94it/s]rewrite (healthcare):  36%|███▌      | 13/36 [00:01<00:01, 13.96it/s]rewrite (healthcare):  50%|█████     | 18/36 [00:01<00:00, 19.71it/s]rewrite (healthcare):  58%|█████▊    | 21/36 [00:01<00:01, 14.63it/s]rewrite (healthcare):  69%|██████▉   | 25/36 [00:01<00:00, 17.38it/s]rewrite (healthcare):  86%|████████▌ | 31/36 [00:01<00:00, 18.66it/s]rewrite (healthcare):  94%|█████████▍| 34/36 [00:02<00:00, 18.22it/s]                                                                     neutrals (healthcare/scenario_1):   0%|          | 0/45 [00:00<?, ?it/s]
+neutrals (healthcare/scenario_2):   0%|          | 0/45 [00:00<?, ?it/s][A
+
+neutrals (healthcare/scenario_3):   0%|          | 0/45 [00:00<?, ?it/s][A[Aneutrals (healthcare/scenario_1):   2%|▏         | 1/45 [00:00<00:22,  1.92it/s]neutrals (healthcare/scenario_1):  20%|██        | 9/45 [00:00<00:01, 18.09it/s]neutrals (healthcare/scenario_1):  31%|███       | 14/45 [00:01<00:02, 14.25it/s]neutrals (healthcare/scenario_1):  44%|████▍     | 20/45 [00:01<00:01, 18.56it/s]neutrals (healthcare/scenario_1):  51%|█████     | 23/45 [00:01<00:01, 15.30it/s]neutrals (healthcare/scenario_1):  64%|██████▍   | 29/45 [00:01<00:00, 19.97it/s]neutrals (healthcare/scenario_1):  71%|███████   | 32/45 [00:02<00:00, 16.02it/s]neutrals (healthcare/scenario_1):  84%|████████▍ | 38/45 [00:02<00:00, 20.44it/s]neutrals (healthcare/scenario_1):  91%|█████████ | 41/45 [00:02<00:00, 17.34it/s]neutrals (healthcare/scenario_1):  98%|█████████▊| 44/45 [00:02<00:00, 19.18it/s]
+neutrals (healthcare/scenario_2):   2%|▏         | 1/45 [00:02<01:55,  2.64s/it][A
+neutrals (healthcare/scenario_2):   7%|▋         | 3/45 [00:02<00:30,  1.36it/s][A
+neutrals (healthcare/scenario_2):  11%|█         | 5/45 [00:03<00:16,  2.39it/s][A
+neutrals (healthcare/scenario_2):  20%|██        | 9/45 [00:03<00:06,  5.23it/s][A
+neutrals (healthcare/scenario_2):  27%|██▋       | 12/45 [00:03<00:04,  7.49it/s][A
+neutrals (healthcare/scenario_2):  31%|███       | 14/45 [00:03<00:04,  7.71it/s][A
+neutrals (healthcare/scenario_2):  38%|███▊      | 17/45 [00:03<00:02, 10.08it/s][A
+neutrals (healthcare/scenario_2):  44%|████▍     | 20/45 [00:03<00:01, 12.94it/s][A
+neutrals (healthcare/scenario_2):  51%|█████     | 23/45 [00:04<00:01, 11.73it/s][A
+neutrals (healthcare/scenario_2):  60%|██████    | 27/45 [00:04<00:01, 15.84it/s][A
+neutrals (healthcare/scenario_2):  67%|██████▋   | 30/45 [00:04<00:00, 16.00it/s][A
+neutrals (healthcare/scenario_2):  73%|███████▎  | 33/45 [00:04<00:00, 13.56it/s][A
+neutrals (healthcare/scenario_2):  84%|████████▍ | 38/45 [00:04<00:00, 17.12it/s][A
+neutrals (healthcare/scenario_2):  91%|█████████ | 41/45 [00:05<00:00, 15.57it/s][A                                                                                 
+neutrals (healthcare/scenario_2):  96%|█████████▌| 43/45 [00:05<00:00, 15.71it/s][A
+                                                                                 [A
+
+neutrals (healthcare/scenario_3):   2%|▏         | 1/45 [00:05<03:53,  5.31s/it][A[A
+
+neutrals (healthcare/scenario_3):   9%|▉         | 4/45 [00:05<00:44,  1.10s/it][A[A
+
+neutrals (healthcare/scenario_3):  22%|██▏       | 10/45 [00:05<00:12,  2.90it/s][A[A
+
+neutrals (healthcare/scenario_3):  29%|██▉       | 13/45 [00:05<00:07,  4.04it/s][A[A
+
+neutrals (healthcare/scenario_3):  36%|███▌      | 16/45 [00:06<00:05,  5.01it/s][A[A
+
+neutrals (healthcare/scenario_3):  44%|████▍     | 20/45 [00:06<00:03,  7.38it/s][A[A
+
+neutrals (healthcare/scenario_3):  51%|█████     | 23/45 [00:06<00:02,  8.84it/s][A[A
+
+neutrals (healthcare/scenario_3):  58%|█████▊    | 26/45 [00:06<00:01,  9.76it/s][A[A
+
+neutrals (healthcare/scenario_3):  62%|██████▏   | 28/45 [00:06<00:01, 10.56it/s][A[A
+
+neutrals (healthcare/scenario_3):  67%|██████▋   | 30/45 [00:07<00:01, 11.68it/s][A[A
+
+neutrals (healthcare/scenario_3):  73%|███████▎  | 33/45 [00:07<00:00, 12.69it/s][A[A
+
+neutrals (healthcare/scenario_3):  80%|████████  | 36/45 [00:07<00:00, 14.83it/s][A[A
+
+neutrals (healthcare/scenario_3):  84%|████████▍ | 38/45 [00:07<00:00, 14.80it/s][A[A
+
+neutrals (healthcare/scenario_3):  93%|█████████▎| 42/45 [00:07<00:00, 18.95it/s][A[A
+
+neutrals (healthcare/scenario_3): 100%|██████████| 45/45 [00:07<00:00, 17.93it/s][A[A
+
+                                                                                 [A[Arewrite (legal):   0%|          | 0/34 [00:00<?, ?it/s]rewrite (legal):   3%|▎         | 1/34 [00:00<00:14,  2.25it/s]rewrite (legal):  26%|██▋       | 9/34 [00:00<00:01, 18.01it/s]rewrite (legal):  35%|███▌      | 12/34 [00:00<00:01, 13.67it/s]rewrite (legal):  50%|█████     | 17/34 [00:01<00:00, 18.75it/s]rewrite (legal):  59%|█████▉    | 20/34 [00:01<00:00, 19.61it/s]rewrite (legal):  68%|██████▊   | 23/34 [00:01<00:00, 17.18it/s]rewrite (legal):  76%|███████▋  | 26/34 [00:01<00:00, 18.74it/s]rewrite (legal):  88%|████████▊ | 30/34 [00:01<00:00, 21.15it/s]rewrite (legal):  97%|█████████▋| 33/34 [00:01<00:00, 17.20it/s]                                                                neutrals (legal/scenario_1):   0%|          | 0/45 [00:00<?, ?it/s]
+neutrals (legal/scenario_2):   0%|          | 0/45 [00:00<?, ?it/s][A
+
+neutrals (legal/scenario_3):   0%|          | 0/45 [00:00<?, ?it/s][A[Aneutrals (legal/scenario_1):   2%|▏         | 1/45 [00:00<00:21,  2.01it/s]neutrals (legal/scenario_1):  22%|██▏       | 10/45 [00:00<00:01, 18.71it/s]neutrals (legal/scenario_1):  31%|███       | 14/45 [00:01<00:02, 14.80it/s]neutrals (legal/scenario_1):  42%|████▏     | 19/45 [00:01<00:01, 19.63it/s]neutrals (legal/scenario_1):  49%|████▉     | 22/45 [00:01<00:01, 16.87it/s]neutrals (legal/scenario_1):  56%|█████▌    | 25/45 [00:01<00:01, 17.56it/s]neutrals (legal/scenario_1):  67%|██████▋   | 30/45 [00:01<00:00, 21.91it/s]neutrals (legal/scenario_1):  73%|███████▎  | 33/45 [00:01<00:00, 17.21it/s]neutrals (legal/scenario_1):  87%|████████▋ | 39/45 [00:02<00:00, 22.85it/s]neutrals (legal/scenario_1):  93%|█████████▎| 42/45 [00:02<00:00, 18.20it/s]
+neutrals (legal/scenario_2):   2%|▏         | 1/45 [00:02<01:50,  2.50s/it][Aneutrals (legal/scenario_1): 100%|██████████| 45/45 [00:02<00:00, 20.10it/s]                                                                            
+neutrals (legal/scenario_2):   7%|▋         | 3/45 [00:02<00:28,  1.46it/s][A
+neutrals (legal/scenario_2):  11%|█         | 5/45 [00:02<00:15,  2.61it/s][A
+neutrals (legal/scenario_2):  16%|█▌        | 7/45 [00:02<00:09,  4.07it/s][A
+neutrals (legal/scenario_2):  22%|██▏       | 10/45 [00:03<00:05,  6.85it/s][A
+neutrals (legal/scenario_2):  29%|██▉       | 13/45 [00:03<00:03,  9.83it/s][A
+neutrals (legal/scenario_2):  36%|███▌      | 16/45 [00:03<00:02, 10.19it/s][A
+neutrals (legal/scenario_2):  44%|████▍     | 20/45 [00:03<00:01, 14.34it/s][A
+neutrals (legal/scenario_2):  51%|█████     | 23/45 [00:03<00:01, 15.98it/s][A
+neutrals (legal/scenario_2):  58%|█████▊    | 26/45 [00:03<00:01, 15.81it/s][A
+neutrals (legal/scenario_2):  64%|██████▍   | 29/45 [00:03<00:00, 17.66it/s][A
+neutrals (legal/scenario_2):  71%|███████   | 32/45 [00:04<00:00, 17.82it/s][A
+neutrals (legal/scenario_2):  78%|███████▊  | 35/45 [00:04<00:00, 16.87it/s][A
+neutrals (legal/scenario_2):  87%|████████▋ | 39/45 [00:04<00:00, 20.84it/s][A
+neutrals (legal/scenario_2):  93%|█████████▎| 42/45 [00:04<00:00, 19.12it/s][A
+
+neutrals (legal/scenario_3):   2%|▏         | 1/45 [00:04<03:33,  4.86s/it][A[A
+
+neutrals (legal/scenario_3):  11%|█         | 5/45 [00:04<00:29,  1.34it/s][A[A
+neutrals (legal/scenario_2): 100%|██████████| 45/45 [00:05<00:00, 11.94it/s][A
+                                                                            [A
+
+neutrals (legal/scenario_3):  18%|█▊        | 8/45 [00:05<00:15,  2.36it/s][A[A
+
+neutrals (legal/scenario_3):  22%|██▏       | 10/45 [00:05<00:11,  3.14it/s][A[A
+
+neutrals (legal/scenario_3):  31%|███       | 14/45 [00:05<00:05,  5.47it/s][A[A
+
+neutrals (legal/scenario_3):  38%|███▊      | 17/45 [00:05<00:04,  6.77it/s][A[A
+
+neutrals (legal/scenario_3):  44%|████▍     | 20/45 [00:05<00:02,  8.37it/s][A[A
+
+neutrals (legal/scenario_3):  53%|█████▎    | 24/45 [00:06<00:01, 11.30it/s][A[A
+
+neutrals (legal/scenario_3):  60%|██████    | 27/45 [00:06<00:01, 13.75it/s][A[A
+
+neutrals (legal/scenario_3):  67%|██████▋   | 30/45 [00:06<00:01, 12.66it/s][A[A
+
+neutrals (legal/scenario_3):  76%|███████▌  | 34/45 [00:06<00:00, 15.71it/s][A[A
+
+neutrals (legal/scenario_3):  82%|████████▏ | 37/45 [00:06<00:00, 16.09it/s][A[A
+
+neutrals (legal/scenario_3):  89%|████████▉ | 40/45 [00:06<00:00, 15.63it/s][A[A
+
+neutrals (legal/scenario_3):  93%|█████████▎| 42/45 [00:07<00:00, 16.14it/s][A[A
+
+neutrals (legal/scenario_3): 100%|██████████| 45/45 [00:07<00:00, 18.46it/s][A[A
+
+                                                                            [A[Arewrite (marketing):   0%|          | 0/36 [00:00<?, ?it/s]rewrite (marketing):   3%|▎         | 1/36 [00:00<00:17,  1.97it/s]rewrite (marketing):  31%|███       | 11/36 [00:01<00:02, 12.27it/s]rewrite (marketing):  50%|█████     | 18/36 [00:01<00:00, 19.98it/s]rewrite (marketing):  61%|██████    | 22/36 [00:01<00:00, 15.16it/s]rewrite (marketing):  75%|███████▌  | 27/36 [00:01<00:00, 19.56it/s]rewrite (marketing):  86%|████████▌ | 31/36 [00:01<00:00, 17.18it/s]rewrite (marketing):  94%|█████████▍| 34/36 [00:02<00:00, 17.30it/s]                                                                    neutrals (marketing/scenario_1):   0%|          | 0/45 [00:00<?, ?it/s]
+neutrals (marketing/scenario_2):   0%|          | 0/45 [00:00<?, ?it/s][A
+
+neutrals (marketing/scenario_3):   0%|          | 0/45 [00:00<?, ?it/s][A[Aneutrals (marketing/scenario_1):   2%|▏         | 1/45 [00:00<00:23,  1.89it/s]neutrals (marketing/scenario_1):  24%|██▍       | 11/45 [00:01<00:02, 11.88it/s]neutrals (marketing/scenario_1):  38%|███▊      | 17/45 [00:01<00:01, 18.35it/s]neutrals (marketing/scenario_1):  47%|████▋     | 21/45 [00:01<00:01, 14.94it/s]neutrals (marketing/scenario_1):  53%|█████▎    | 24/45 [00:01<00:01, 16.59it/s]neutrals (marketing/scenario_1):  67%|██████▋   | 30/45 [00:01<00:00, 22.83it/s]neutrals (marketing/scenario_1):  76%|███████▌  | 34/45 [00:02<00:00, 16.12it/s]neutrals (marketing/scenario_1):  91%|█████████ | 41/45 [00:02<00:00, 18.65it/s]
+neutrals (marketing/scenario_2):   2%|▏         | 1/45 [00:02<01:58,  2.70s/it][Aneutrals (marketing/scenario_1):  98%|█████████▊| 44/45 [00:02<00:00, 17.16it/s]                                                                                
+neutrals (marketing/scenario_2):   7%|▋         | 3/45 [00:02<00:31,  1.32it/s][A
+neutrals (marketing/scenario_2):  13%|█▎        | 6/45 [00:03<00:12,  3.03it/s][A
+neutrals (marketing/scenario_2):  18%|█▊        | 8/45 [00:03<00:08,  4.39it/s][A
+neutrals (marketing/scenario_2):  22%|██▏       | 10/45 [00:03<00:06,  5.58it/s][A
+neutrals (marketing/scenario_2):  29%|██▉       | 13/45 [00:03<00:03,  8.41it/s][A
+neutrals (marketing/scenario_2):  36%|███▌      | 16/45 [00:03<00:02, 10.54it/s][A
+neutrals (marketing/scenario_2):  40%|████      | 18/45 [00:03<00:02, 10.02it/s][A
+neutrals (marketing/scenario_2):  49%|████▉     | 22/45 [00:03<00:01, 14.54it/s][A
+neutrals (marketing/scenario_2):  58%|█████▊    | 26/45 [00:04<00:01, 15.43it/s][A
+neutrals (marketing/scenario_2):  64%|██████▍   | 29/45 [00:04<00:00, 16.33it/s][A
+neutrals (marketing/scenario_2):  73%|███████▎  | 33/45 [00:04<00:00, 17.35it/s][A
+neutrals (marketing/scenario_2):  78%|███████▊  | 35/45 [00:04<00:00, 13.99it/s][A
+neutrals (marketing/scenario_2):  82%|████████▏ | 37/45 [00:04<00:00, 13.75it/s][A
+neutrals (marketing/scenario_2):  96%|█████████▌| 43/45 [00:05<00:00, 20.60it/s][A
+                                                                                [A
+
+neutrals (marketing/scenario_3):   2%|▏         | 1/45 [00:05<03:56,  5.37s/it][A[A
+
+neutrals (marketing/scenario_3):   7%|▋         | 3/45 [00:05<01:00,  1.44s/it][A[A
+
+neutrals (marketing/scenario_3):  18%|█▊        | 8/45 [00:05<00:15,  2.34it/s][A[A
+
+neutrals (marketing/scenario_3):  22%|██▏       | 10/45 [00:05<00:11,  3.11it/s][A[A
+
+neutrals (marketing/scenario_3):  27%|██▋       | 12/45 [00:05<00:08,  4.06it/s][A[A
+
+neutrals (marketing/scenario_3):  36%|███▌      | 16/45 [00:06<00:04,  6.78it/s][A[A
+
+neutrals (marketing/scenario_3):  42%|████▏     | 19/45 [00:06<00:03,  8.58it/s][A[A
+
+neutrals (marketing/scenario_3):  49%|████▉     | 22/45 [00:06<00:02,  9.72it/s][A[A
+
+neutrals (marketing/scenario_3):  56%|█████▌    | 25/45 [00:06<00:01, 12.06it/s][A[A
+
+neutrals (marketing/scenario_3):  62%|██████▏   | 28/45 [00:06<00:01, 14.20it/s][A[A
+
+neutrals (marketing/scenario_3):  69%|██████▉   | 31/45 [00:06<00:01, 13.91it/s][A[A
+
+neutrals (marketing/scenario_3):  76%|███████▌  | 34/45 [00:07<00:00, 16.40it/s][A[A
+
+neutrals (marketing/scenario_3):  82%|████████▏ | 37/45 [00:07<00:00, 16.00it/s][A[A
+
+neutrals (marketing/scenario_3):  87%|████████▋ | 39/45 [00:07<00:00, 16.08it/s][A[A
+
+neutrals (marketing/scenario_3):  91%|█████████ | 41/45 [00:07<00:00, 15.97it/s][A[A
+
+neutrals (marketing/scenario_3): 100%|██████████| 45/45 [00:07<00:00, 16.41it/s][A[A
+
+                                                                                [A[Arewrite (software_infrastructure):   0%|          | 0/32 [00:00<?, ?it/s]rewrite (software_infrastructure):   3%|▎         | 1/32 [00:00<00:13,  2.24it/s]rewrite (software_infrastructure):  22%|██▏       | 7/32 [00:00<00:01, 16.26it/s]rewrite (software_infrastructure):  34%|███▍      | 11/32 [00:00<00:01, 12.27it/s]rewrite (software_infrastructure):  53%|█████▎    | 17/32 [00:01<00:00, 20.14it/s]rewrite (software_infrastructure):  66%|██████▌   | 21/32 [00:01<00:00, 16.38it/s]rewrite (software_infrastructure):  75%|███████▌  | 24/32 [00:01<00:00, 17.26it/s]rewrite (software_infrastructure):  97%|█████████▋| 31/32 [00:01<00:00, 18.15it/s]                                                                                  neutrals (software_infrastructure/scenario_1):   0%|          | 0/45 [00:00<?, ?it/s]
+neutrals (software_infrastructure/scenario_2):   0%|          | 0/45 [00:00<?, ?it/s][A
+
+neutrals (software_infrastructure/scenario_3):   0%|          | 0/45 [00:00<?, ?it/s][A[Aneutrals (software_infrastructure/scenario_1):   2%|▏         | 1/45 [00:00<00:21,  2.03it/s]neutrals (software_infrastructure/scenario_1):  18%|█▊        | 8/45 [00:00<00:02, 16.57it/s]neutrals (software_infrastructure/scenario_1):  27%|██▋       | 12/45 [00:00<00:02, 13.36it/s]neutrals (software_infrastructure/scenario_1):  42%|████▏     | 19/45 [00:01<00:01, 20.35it/s]neutrals (software_infrastructure/scenario_1):  51%|█████     | 23/45 [00:01<00:01, 16.19it/s]neutrals (software_infrastructure/scenario_1):  62%|██████▏   | 28/45 [00:01<00:00, 20.51it/s]neutrals (software_infrastructure/scenario_1):  69%|██████▉   | 31/45 [00:02<00:00, 15.09it/s]neutrals (software_infrastructure/scenario_1):  80%|████████  | 36/45 [00:02<00:00, 19.77it/s]neutrals (software_infrastructure/scenario_1):  87%|████████▋ | 39/45 [00:02<00:00, 16.82it/s]neutrals (software_infrastructure/scenario_1):  93%|█████████▎| 42/45 [00:02<00:00, 17.34it/s]
+neutrals (software_infrastructure/scenario_2):   2%|▏         | 1/45 [00:02<01:59,  2.71s/it][Aneutrals (software_infrastructure/scenario_1): 100%|██████████| 45/45 [00:02<00:00, 16.40it/s]                                                                                              
+neutrals (software_infrastructure/scenario_2):   4%|▍         | 2/45 [00:02<00:51,  1.20s/it][A
+neutrals (software_infrastructure/scenario_2):  11%|█         | 5/45 [00:03<00:15,  2.61it/s][A
+neutrals (software_infrastructure/scenario_2):  18%|█▊        | 8/45 [00:03<00:07,  4.74it/s][A
+neutrals (software_infrastructure/scenario_2):  27%|██▋       | 12/45 [00:03<00:04,  7.53it/s][A
+neutrals (software_infrastructure/scenario_2):  33%|███▎      | 15/45 [00:03<00:03,  9.58it/s][A
+neutrals (software_infrastructure/scenario_2):  38%|███▊      | 17/45 [00:03<00:02, 10.36it/s][A
+neutrals (software_infrastructure/scenario_2):  44%|████▍     | 20/45 [00:03<00:01, 13.36it/s][A
+neutrals (software_infrastructure/scenario_2):  51%|█████     | 23/45 [00:03<00:01, 15.82it/s][A
+neutrals (software_infrastructure/scenario_2):  58%|█████▊    | 26/45 [00:04<00:01, 13.85it/s][A
+neutrals (software_infrastructure/scenario_2):  64%|██████▍   | 29/45 [00:04<00:00, 16.01it/s][A
+neutrals (software_infrastructure/scenario_2):  73%|███████▎  | 33/45 [00:04<00:00, 19.05it/s][A
+neutrals (software_infrastructure/scenario_2):  80%|████████  | 36/45 [00:04<00:00, 14.88it/s][A
+neutrals (software_infrastructure/scenario_2):  87%|████████▋ | 39/45 [00:04<00:00, 17.41it/s][A
+neutrals (software_infrastructure/scenario_2):  96%|█████████▌| 43/45 [00:05<00:00, 16.99it/s][A
+
+neutrals (software_infrastructure/scenario_3):   2%|▏         | 1/45 [00:05<03:46,  5.16s/it][A[A
+                                                                                              [A
+
+neutrals (software_infrastructure/scenario_3):   4%|▍         | 2/45 [00:05<01:34,  2.19s/it][A[A
+
+neutrals (software_infrastructure/scenario_3):  16%|█▌        | 7/45 [00:05<00:16,  2.29it/s][A[A
+
+neutrals (software_infrastructure/scenario_3):  22%|██▏       | 10/45 [00:05<00:10,  3.36it/s][A[A
+
+neutrals (software_infrastructure/scenario_3):  33%|███▎      | 15/45 [00:05<00:04,  6.18it/s][A[A
+
+neutrals (software_infrastructure/scenario_3):  40%|████      | 18/45 [00:06<00:03,  6.80it/s][A[A
+
+neutrals (software_infrastructure/scenario_3):  53%|█████▎    | 24/45 [00:06<00:01, 11.20it/s][A[A
+
+neutrals (software_infrastructure/scenario_3):  62%|██████▏   | 28/45 [00:06<00:01, 11.70it/s][A[A
+
+neutrals (software_infrastructure/scenario_3):  69%|██████▉   | 31/45 [00:06<00:01, 13.50it/s][A[A
+
+neutrals (software_infrastructure/scenario_3):  76%|███████▌  | 34/45 [00:06<00:00, 15.67it/s][A[A
+
+neutrals (software_infrastructure/scenario_3):  82%|████████▏ | 37/45 [00:06<00:00, 16.55it/s][A[A
+
+neutrals (software_infrastructure/scenario_3):  89%|████████▉ | 40/45 [00:07<00:00, 15.65it/s][A[A
+
+neutrals (software_infrastructure/scenario_3): 100%|██████████| 45/45 [00:07<00:00, 21.30it/s][A[A
+
+                                                                                              [A[ASaved 21 entries to /helios-storage/helios3-data/jihyun/memdrift/ablation/biased_ratio/dataset/speed_impatience.json
+Per entry: biased=17, neutral=45

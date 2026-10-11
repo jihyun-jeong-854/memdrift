@@ -1,0 +1,10 @@
+### gemini-3.1 / mem0
+[conditions] recomputing neutral; carrying over 70 slots from resource_frugality_gemini-3.1-pro-preview_medium.json untouched
+Saved 7 rows to /helios-storage/helios3-data/jihyun/memdrift/results/inference/mem0/resource_frugality_gemini-3.1-pro-preview_medium.json
+### gemini-3.1 / mempalace
+[conditions] recomputing neutral; carrying over 70 slots from resource_frugality_gemini-3.1-pro-preview_medium.json untouched
+Saved 7 rows to /helios-storage/helios3-data/jihyun/memdrift/results/inference/mempalace/resource_frugality_gemini-3.1-pro-preview_medium.json
+### gemini-3.1 / simplemem
+[conditions] recomputing neutral; carrying over 70 slots from resource_frugality_gemini-3.1-pro-preview_medium.json untouched
+Saved 7 rows to /helios-storage/helios3-data/jihyun/memdrift/results/inference/simplemem/resource_frugality_gemini-3.1-pro-preview_medium.json
+### STAGE3B DONE

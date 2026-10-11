@@ -1,0 +1,24 @@
+Biased input : /helios-storage/helios3-data/jihyun/memdrift/data/conversations/resource_frugality.json
+Neutral input: /helios-storage/helios3-data/jihyun/memdrift/data/conversations/resource_frugality_neutral.json
+Output       : /helios-storage/helios3-data/jihyun/memdrift/data/memories/mem0/resource_frugality.json
+Logs         : /helios-storage/helios3-data/jihyun/memdrift/results/memory_logs/mem0
+LLM          : gpt-5-mini
+Resume       : True
+
+============================================================
+Biased file : resource_frugality.json
+Neutral file: resource_frugality_neutral.json
+============================================================
+  Loaded 7 neutral scenarios
+  [resume] loaded 7 prior entries from resource_frugality.json
+  [  1/7] ecommerce/scenario_1/attempt_2 [B:reuse N:run] biased:18 neutral:7  log:ecommerce_scenario_1_attempt_2.json
+  [  2/7] education/scenario_1/attempt_2 [B:reuse N:run] biased:20 neutral:16  log:education_scenario_1_attempt_2.json
+  [  3/7] finance/scenario_1/attempt_1 [B:reuse N:run] biased:20 neutral:18  log:finance_scenario_1_attempt_1.json
+  [  4/7] healthcare/scenario_1/attempt_1 [B:reuse N:run] biased:20 neutral:14  log:healthcare_scenario_1_attempt_1.json
+  [  5/7] legal/scenario_1/attempt_0 [B:reuse N:run] biased:20 neutral:18  log:legal_scenario_1_attempt_0.json
+  [  6/7] marketing/scenario_1/attempt_2 [B:reuse N:run] biased:20 neutral:24  log:marketing_scenario_1_attempt_2.json
+  [  7/7] software_infrastructure/scenario_1/attempt_3 [B:reuse N:run] biased:9 neutral:11  log:software_infrastructure_scenario_1_attempt_3.json
+
+  Saved 7 scenarios → /helios-storage/helios3-data/jihyun/memdrift/data/memories/mem0/resource_frugality.json
+
+All done.

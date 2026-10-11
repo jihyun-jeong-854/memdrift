@@ -1,0 +1,25 @@
+# secrets
+.env
+
+# benchmark data — downloaded from Hugging Face, see scripts/download_data.py
+data/*
+!data/README.md
+
+# run outputs
+results/
+
+# third-party checkouts (SimpleMem)
+third_party/
+
+# local memory-system scratch state
+qdrant_storage*/
+*.lance/
+.mempalace*/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
