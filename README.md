@@ -1,7 +1,6 @@
 # MemDrift
 
 Code for **[Memory-Induced Tool-Drift in LLM Agents](https://arxiv.org/abs/2605.24941)**
-(Dabas, Jeong, Jin, Jia — arXiv:2605.24941).
 
 **Memory-induced tool drift**: when an LLM agent with personalized memory
 transfers a user's *personal* dispositions into *professional* tool-call
