@@ -25,7 +25,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common.paths import DATA_ROOT
 
-DEFAULT_REPO = os.getenv("MEMDRIFT_HF_REPO", "MemDrift/MemDrift")
+DEFAULT_REPO = os.getenv("MEMDRIFT_HF_REPO", "jhjeong99/memdrift")
 
 # Which directories each subset needs. The direct-injection setting needs only
 # `scenarios`; the memory-architecture setting needs `memories` as well.

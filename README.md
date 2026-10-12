@@ -1,5 +1,8 @@
 # MemDrift
 
+Code for **[Memory-Induced Tool-Drift in LLM Agents](https://arxiv.org/abs/2605.24941)**
+(Dabas, Jeong, Jin, Jia — arXiv:2605.24941).
+
 **Memory-induced tool drift**: when an LLM agent with personalized memory
 transfers a user's *personal* dispositions into *professional* tool-call
 decisions where those dispositions have no bearing on the correct choice.
@@ -461,8 +464,13 @@ on updated inference output simply reproduces the new numbers.
 ## Citation
 
 ```bibtex
-@misc{memdrift,
-  title  = {MemDrift: Measuring Memory-Induced Tool Drift in LLM Agents},
-  year   = {2026},
+@misc{dabas2026memoryinducedtooldriftllmagents,
+      title={Memory-Induced Tool-Drift in LLM Agents},
+      author={Mahavir Dabas and Jihyun Jeong and Ming Jin and Ruoxi Jia},
+      year={2026},
+      eprint={2605.24941},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2605.24941},
 }
 ```

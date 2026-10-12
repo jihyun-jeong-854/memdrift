@@ -23,3 +23,12 @@ __pycache__/
 .venv/
 venv/
 .ipynb_checkpoints/
+
+# ablation experiments (not part of the published benchmark)
+ablation/
+
+# run logs — local paths and provider account ids, no value to a reader
+logs/
+
+# generated figures
+figures/
