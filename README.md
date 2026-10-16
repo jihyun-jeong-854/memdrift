@@ -44,7 +44,7 @@ Every sample is run under all three, k=5 tool calls each:
 
 | Condition | User memory | Purpose |
 |---|---|---|
-| `base` | ∅ | reference behavior with no user memory |
+| `base` | M_base | reference behavior with no user memory |
 | `neutral` | M_base ∪ M_n | personal memories with no directional bias |
 | `biased` | M_base ∪ M_b | personal memories carrying the trait |
 
