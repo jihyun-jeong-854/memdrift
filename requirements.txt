@@ -1,22 +1,8 @@
 # ---- core: needed for both evaluation settings ------------------------------
 openai>=1.40
-anthropic>=0.40
+anthropic>=0.40           # drift_inference --provider anthropic
 pandas>=2.0
 python-dotenv>=1.0
 tqdm>=4.66
 tabulate>=0.9              # pandas .to_markdown()
 huggingface_hub>=0.25      # scripts/download_data.py
-
-# ---- benchmark + conversation creation only ---------------------------------
-# scenario_creation and conversation_creation drive Claude through the Agent SDK
-claude-agent-sdk>=0.1
-nest_asyncio>=1.6          # Agent SDK helpers inside notebooks
-
-# ---- memory_construction only -----------------------------------------------
-# Needed only to rebuild data/memories/ yourself. The prebuilt files are on
-# Hugging Face, so skip these if you are just running the evaluation.
-# mem0 and mempalace pin conflicting vector stores — install them in separate
-# environments (see README, "Rebuilding the memory stores").
-#   mem0ai>=0.1.50         # + qdrant-client
-#   mempalace>=3.3.1       # + chromadb
-#   SimpleMem: not on PyPI — clone it and set MEMDRIFT_SIMPLEMEM_PATH

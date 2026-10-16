@@ -58,7 +58,7 @@ BIAS_DIMENSIONS = (
     "autonomy_self_reliance",
 )
 
-# The seven professional domains (configs/domains.json).
+# The seven professional domains.
 DOMAINS = (
     "healthcare",
     "finance",

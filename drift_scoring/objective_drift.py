@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """Objective drift metric — deterministic, no LLM in the loop.
 
-The counterpart to judge_drift.py. Where the judge reads the tool calls and
-forms an opinion, this counts: for each run pair, what fraction of the
-task-critical parameters moved in the *worse* direction relative to the base
-condition. Direction only, magnitude ignored — a one-step and a two-step slide
-both count once.
+For each run pair, what fraction of the task-critical parameters moved in the
+*worse* direction relative to the base condition. Direction only, magnitude
+ignored — a one-step and a two-step slide both count once.
 
     enum     flip if order_worst_first.index(cond) < .index(base)
     boolean  flip if base != worse_value and cond == worse_value
@@ -158,8 +156,7 @@ def score_files(settings, models, reasoning, bias_dimensions, variant,
             raise SystemExit(
                 f"Rubric not found: {rub_path}\n"
                 "The objective metric needs the rubric. Fetch it with "
-                "scripts/download_data.py, or build one with "
-                "drift_scoring.rubric_all_params."
+                "scripts/download_data.py."
             )
         rubric = json.load(open(rub_path))
 

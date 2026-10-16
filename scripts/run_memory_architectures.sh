@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-# Setting 2 — memory architectures, end to end: inference -> judge -> summarize.
+# Setting 2 — memory architectures, end to end: inference -> objective score.
 #
-# Loops over memory architectures for one (bias dimension, model) pair. The
-# system prompt is filled with what each architecture actually retrieved for the
-# professional query, so data/memories/<arch>/<bias>.json must already exist
-# (see memory_construction/, or download it from the Hugging Face dataset).
+# Loops the inference over memory architectures for one (bias dimension, model)
+# pair, then scores them together. The system prompt is filled with what each
+# architecture actually retrieved for the professional query, so
+# data/memories/<arch>/<bias>.json must already exist
+# (download it from the Hugging Face dataset: scripts/download_data.py).
 #
 # Usage:
 #   bash scripts/run_memory_architectures.sh                        # bias = speed_impatience
@@ -36,15 +37,12 @@ fi
 
 cd "$REPO_ROOT"
 
-TSV_FILE=$(mktemp)
-trap 'rm -f "$TSV_FILE"' EXIT
-
+scored=""
 for mem_arch in $MEM_ARCHS; do
     printf "\n================================================================\n"
-    printf " mem_arch = %s | bias = %s\n" "$mem_arch" "$BIAS"
+    printf " %s | bias = %s | model = %s_%s\n" "$mem_arch" "$BIAS" "$SAFE_MODEL" "$REASONING"
     printf "================================================================\n"
 
-    echo "[1/3] inference"
     python -m drift_inference.inference_memory \
         --provider "$PROVIDER" \
         --bias "$BIAS" \
@@ -59,53 +57,22 @@ for mem_arch in $MEM_ARCHS; do
         echo "[skip $mem_arch] inference output missing: $inference_json" >&2
         continue
     fi
-
-    echo "[2/3] judge"
-    python -m drift_scoring.judge_drift "$inference_json" --setting "$mem_arch" \
-        || { echo "[skip $mem_arch] judge failed" >&2; continue; }
-
-    judged_json="${RESULTS_ROOT}/scores/${mem_arch}/${RESULT_NAME}"
-    if [[ ! -f "$judged_json" ]]; then
-        echo "[skip $mem_arch] judge output missing: $judged_json" >&2
-        continue
-    fi
-
-    echo "[3/3] summarize"
-    python -m drift_scoring.summarize_drift "$judged_json" --label "$mem_arch" --tsv >> "$TSV_FILE"
+    scored="${scored} ${mem_arch}"
 done
 
-if [[ ! -s "$TSV_FILE" ]]; then
-    echo "No memory architectures were summarized." >&2
+if [[ -z "${scored// }" ]]; then
+    echo "No architectures produced inference output." >&2
     exit 1
 fi
 
-FMT="%-15s  %4s  %12s  %3s  %12s  %3s  %8s\n"
-SEP="--------------------------------------------------------------------------"
-
-printf "\n"
-printf "Bias: %s   Model: %s_%s\n\n" "$BIAS" "$SAFE_MODEL" "$REASONING"
-printf "$FMT" "mem_arch" "rows" "neutral_mean" "n" "biased_mean" "n" "delta"
-echo "$SEP"
-
-while IFS=$'\t' read -r label rows nmean n_n bmean b_n delta; do
-    nmean_fmt=$(awk -v v="$nmean" 'BEGIN { if (v == "NA") print "—"; else printf "%.3f", v }')
-    bmean_fmt=$(awk -v v="$bmean" 'BEGIN { if (v == "NA") print "—"; else printf "%.3f", v }')
-    delta_fmt=$(awk -v v="$delta" 'BEGIN { if (v == "NA") print "—"; else printf "%+.3f", v }')
-    printf "$FMT" "$label" "$rows" "$nmean_fmt" "$n_n" "$bmean_fmt" "$b_n" "$delta_fmt"
-done < "$TSV_FILE"
-
-echo "$SEP"
-awk -F'\t' -v FMT="$FMT" '
-BEGIN { n_sum=0; n_cnt=0; b_sum=0; b_cnt=0 }
-$3 != "NA" { n_sum += $3; n_cnt++ }
-$5 != "NA" { b_sum += $5; b_cnt++ }
-END {
-    if (n_cnt > 0 && b_cnt > 0) {
-        n_mean = n_sum / n_cnt; b_mean = b_sum / b_cnt
-        printf FMT, "OVERALL", "", sprintf("%.3f", n_mean), n_cnt, \
-            sprintf("%.3f", b_mean), b_cnt, sprintf("%+.3f", b_mean - n_mean)
-    } else {
-        print "OVERALL: not enough numeric rows"
-    }
-}
-' "$TSV_FILE"
+# One scoring pass over the architectures that ran. objective_drift prints the
+# comparison table itself and writes per_scenario / by_bias / by_setting /
+# by_model under results/scores/objective/<variant>/.
+printf "\n================================================================\n"
+printf " scoring: %s | bias = %s\n" "${scored# }" "$BIAS"
+printf "================================================================\n"
+python -m drift_scoring.objective_drift \
+    --settings $scored \
+    --models "$MODEL" \
+    --reasoning "$REASONING" \
+    --bias-dimensions "$BIAS"

@@ -14,7 +14,7 @@ Conditions match the direct setting, with the memory text swapped in:
     neutral   M_base union retrieved(M_n)     what the system returned for the neutral conversations
     biased    M_base union retrieved(M_b)     what the system returned for the biased conversations
 
-Input : data/memories/<mem_arch>/<bias>.json   (built by memory_construction/)
+Input : data/memories/<mem_arch>/<bias>.json   (from the Hugging Face dataset)
 Output: results/inference/<mem_arch>/<bias>_<model>_<reasoning>.json
         every original column plus base_responses, neutral_memory_responses,
         biased_memory_responses — each a list of k tool-call argument dicts

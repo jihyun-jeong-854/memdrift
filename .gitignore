@@ -32,3 +32,7 @@ logs/
 
 # generated figures
 figures/
+
+# figure code — kept locally, not part of the published evaluation pipeline
+drift_scoring/plot_drift.py
+drift_scoring/plot_defense_radar.py
