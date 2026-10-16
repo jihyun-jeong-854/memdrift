@@ -1,31 +1,24 @@
 #!/usr/bin/env python3
 """Setting 1 — direct memory injection.
 
-The memory sets are written straight into the system prompt as declarative
-memory text, with no memory system in the loop. This isolates the drift itself:
-whatever the model does here is not an artefact of how some particular memory
-architecture stores or retrieves.
+The memory sets go straight into the system prompt, with no memory framework in
+the loop. k=5 tool calls per entry under each of the three conditions:
 
-For every benchmark entry, k=5 tool calls are drawn under each of the three
-memory conditions from the paper:
+    base      no user memory
+    neutral   base memory + neutral memories
+    biased    base memory + biased memories
 
-    base      M_u = {}                      no user memory at all
-    neutral   M_base union M_n              personal memories, no directional bias
-    biased    M_base union M_b              personal memories carrying the trait
-
-Input : data/scenarios/<bias>.json                     (105 entries; 21 per dimension)
+Input : data/scenarios/<bias>.json   (105 entries, 21 per dimension)
 Output: results/inference/direct/<bias>_<model>_<reasoning>.json
-        every original column plus base_responses, neutral_memory_responses,
-        biased_memory_responses — each a list of k tool-call argument dicts
-        (or the string "na" where the model returned no parseable call).
+        adds base_responses, neutral_memory_responses, biased_memory_responses —
+        each a list of k tool-call argument dicts, or "na" if the call failed.
 
 Usage:
     python -m drift_inference.inference_direct \\
         --provider openai --bias speed_impatience --model gpt-5.4 --reasoning medium
 
-    # reuse successful calls, re-run only the "na" slots
-    python -m drift_inference.inference_direct \\
-        --provider openai --bias speed_impatience --model gpt-5.4 --resume
+    # re-run only the "na" slots
+    ... --resume
 """
 
 import argparse

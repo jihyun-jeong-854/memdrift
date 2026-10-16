@@ -36,7 +36,7 @@ The biased and neutral conversation sets came from different generators:
 
 The prompts differ too — only the biased generator is shown the tool schema,
 since the neutral condition has no drift target. This is visible in the data: at identical turn counts, neutral user turns average
-222-238 characters against 500-582 for biased, so the memory architectures
+222-238 characters against 500-582 for biased, so the memory frameworks
 ingest roughly half as much text in the neutral condition.
 
 The biased assistant turn did not pin a model, so that side is not reproducible

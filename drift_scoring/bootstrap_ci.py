@@ -1,30 +1,20 @@
 #!/usr/bin/env python3
-"""Scenario-bootstrap 95% CIs for the drift scores.
+"""Paired scenario bootstrap, 95% CIs.
 
-The objective metric is deterministic *given the tool calls*, so it has no
-run-to-run noise to average away — but the 21 scenarios per (bias dimension,
-cell) are a sample, and the mean over them carries sampling uncertainty. That
-is what this CI is over: **scenarios, not runs.**
-
-Neutral and biased are measured on the *same* scenarios, so the delta is
-bootstrapped **paired** — each resample draws a set of scenarios and computes
-both condition means on it. Pairing matters: between-scenario spread (~0.27)
-dwarfs the difference being estimated, and pairing cancels it entirely.
+The CI is over **scenarios, not runs** — the metric is deterministic given the
+tool calls, but the 21 scenarios per cell are a sample. Neutral and biased are
+measured on the same scenarios, so the delta is bootstrapped paired.
 
 Defaults reproduce the published table: percentile bootstrap, B=10,000,
-seed=20250728, 2.5/97.5 percentiles.
+seed=20250728.
 
-Input : the per_scenario.json written by objective_drift.py
-        (or any JSON array with <cond>_flip / <cond>_mean columns)
+Input : per_scenario.json from objective_drift.py
 Output: <input dir>/bootstrap_ci.{json,csv,md}
 
 Usage:
     python -m drift_scoring.bootstrap_ci \\
         results/scores/objective/all_params/per_scenario.json --group setting model
-
-    # per bias dimension as well as overall
-    python -m drift_scoring.bootstrap_ci <per_scenario.json> \\
-        --group setting model --per-dimension
+    ... --per-dimension
 """
 
 import argparse
@@ -146,7 +136,7 @@ def main():
                         help="Columns that define a cell (default: model)")
     parser.add_argument("--per-dimension", action="store_true",
                         help="Also report one row per bias dimension, not just overall")
-    parser.add_argument("--title", default="Objective parameter-level drift rate")
+    parser.add_argument("--title", default="Degradation rate")
     parser.add_argument("--out-dir", type=Path, default=None,
                         help="Default: alongside the input file")
     args = parser.parse_args()

@@ -1,32 +1,17 @@
-"""
-Bootstrapped CIs per cell + paired cross-model / cross-architecture gap tests.
+"""Per-cell CIs and paired gap tests for the top-2 variant.
 
-Answers the reviewer ask directly:
-  "add bootstrapped CIs across the 21 scenarios per cell in Figure 3 / Table 8.
-   Which cross-model and cross-architecture gaps survive?"
+Per cell (model x bias_dimension, n=21, and pooled n=105): mean, std, and a
+percentile bootstrap 95% CI over scenarios (B=10000).
 
-Per cell (model x bias_dimension, n=21 scenarios, and pooled n=105)
-    mean, std, and a percentile bootstrap 95% CI over scenarios (B=10000).
-    `std` is between-scenario heterogeneity (descriptive); the CI is the
-    uncertainty on the mean -- the two are not interchangeable.
+Gaps between two models are measured on the same scenarios, so the test is
+paired — bootstrap CI of the mean paired difference, sign-flip permutation
+p-value, BH-corrected. A gap survives when the CI excludes 0 and p_bh < 0.05.
+Pooled cells also get a domain-cluster CI, resampling the 7 domains.
 
-Gaps
-    Two models are compared on the SAME scenarios, so the test is paired:
-      * CI      : percentile bootstrap over scenarios of the mean paired difference
-      * p-value : paired sign-flip permutation test (respects the pairing)
-      * BH-corrected across all pairs tested
-    A gap "survives" when the bootstrap CI excludes 0 AND p_bh < 0.05.
-    Pairing matters here: between-scenario std (~0.40) dwarfs run-to-run noise
-    (~0.14), and pairing cancels the former entirely.
-
-Also reported per pooled cell: a domain-cluster bootstrap CI (resampling the 7
-domains rather than the 21 scenarios), since scenarios cluster by domain and the
-scenario-level CI is mildly anti-conservative.
-
-Usage
-    python bootstrap_stats.py                       # cross_mean, all clean configs
-    python bootstrap_stats.py --estimator cross_max
-    python bootstrap_stats.py --condition biased_minus_neutral
+Usage:
+    python -m drift_scoring.bootstrap_ci_top2
+    python -m drift_scoring.bootstrap_ci_top2 --estimator cross_max
+    python -m drift_scoring.bootstrap_ci_top2 --condition biased_minus_neutral
 """
 
 from __future__ import annotations

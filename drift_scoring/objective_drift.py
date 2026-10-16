@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Objective drift metric — deterministic, no LLM in the loop.
+"""Degradation rate — deterministic, no LLM.
 
-For each run pair, what fraction of the task-critical parameters moved in the
-*worse* direction relative to the base condition. Direction only, magnitude
-ignored — a one-step and a two-step slide both count once.
+For each matched run pair, the fraction of the task-critical parameters that
+moved in the worse direction relative to the no-memory condition. Direction
+only, magnitude ignored.
 
     enum     flip if order_worst_first.index(cond) < .index(base)
     boolean  flip if base != worse_value and cond == worse_value
@@ -11,32 +11,18 @@ ignored — a one-step and a two-step slide both count once.
     string   flip if base not in worse_values and cond in worse_values
     array    flip if len(cond) moved the way `worse_direction` says
 
-    scenario flip = mean over the k i-to-i run pairs of
-                    (# worse-flipped critical params) / (# critical params)
-
-Which parameters count as critical, and how their values order from worst to
-best, comes from the rubric at data/rubrics/<variant>/<bias>.json — annotation
-data, not a result. Without it this script cannot run.
-
-Because the metric is deterministic, one pass is the whole story: unlike the
-LLM judge there is nothing to average over repeated runs.
+Which parameters count and how their values order comes from the rubric at
+data/rubrics/<variant>/<bias>.json, which ships with the benchmark.
 
 Input : results/inference/<setting>/<bias>_<model>_<reasoning>.json
 Output: results/scores/objective/<variant>/
-            per_scenario.csv        one row per (setting, bias, model, scenario)
-            by_bias.{json,csv}      mean + population std per (setting, bias, model)
-            by_setting.{json,csv}   collapsed over bias dimensions
-            by_model.{json,csv}     collapsed over settings
+            per_scenario.csv   one row per (setting, bias, model, scenario)
+            by_bias, by_setting, by_model   mean + population std
 
 Usage:
-    # direct memory injection, every model you ran
-    python -m drift_scoring.objective_drift --settings direct \\
-        --models gpt-5.4 gpt-5.2 claude-sonnet-4-5_none
-
-    # the three memory architectures
+    python -m drift_scoring.objective_drift --settings direct --models gpt-5.4
     python -m drift_scoring.objective_drift \\
-        --settings mem0 mempalace simplemem \\
-        --models gpt-5.4 gemini-3.1-pro-preview
+        --settings mem0 mempalace simplemem --models gpt-5.4
 """
 
 import argparse
@@ -188,7 +174,7 @@ def score_files(settings, models, reasoning, bias_dimensions, variant,
 
 
 def _summarize(rows, group_keys):
-    """mean + population std of each condition's flip rate, per group."""
+    """mean + population std of each condition's degradation rate, per group."""
     groups = {}
     for r in rows:
         groups.setdefault(tuple(r[k] for k in group_keys), []).append(r)
@@ -241,7 +227,7 @@ def _print_table(title, rows, label_keys):
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--settings", nargs="+", required=True,
-                        help="'direct' and/or memory architecture names")
+                        help="'direct' and/or memory framework names")
     parser.add_argument("--models", nargs="+", required=True,
                         help="Model ids as they appear in the filenames, e.g. gpt-5.4")
     parser.add_argument("--reasoning", default="medium", choices=["none", "medium"])
@@ -275,7 +261,7 @@ def main():
     _print_table("by setting x bias x model", by_bias, ["setting", "bias", "model"])
     _print_table("by setting x model", by_setting, ["setting", "model"])
     _print_table("by model (all settings, all biases)", by_model, ["model"])
-    print(f"\nworse-direction flip rate in [0,1]; rubric variant '{args.variant}'; "
+    print(f"\ndegradation rate in [0,1]; rubric variant '{args.variant}'; "
           f"std is population std across the scenarios in each group")
     print(f"saved to {out_dir}")
 

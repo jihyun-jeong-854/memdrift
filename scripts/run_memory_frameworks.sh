@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
-# Setting 2 — memory architectures, end to end: inference -> objective score.
+# Setting 2 — memory frameworks, end to end: inference -> objective score.
 #
-# Loops the inference over memory architectures for one (bias dimension, model)
+# Loops the inference over memory frameworks for one (bias dimension, model)
 # pair, then scores them together. The system prompt is filled with what each
 # architecture actually retrieved for the professional query, so
 # data/memories/<arch>/<bias>.json must already exist
 # (download it from the Hugging Face dataset: scripts/download_data.py).
 #
 # Usage:
-#   bash scripts/run_memory_architectures.sh                        # bias = speed_impatience
-#   bash scripts/run_memory_architectures.sh resource_frugality     # override bias
+#   bash scripts/run_memory_frameworks.sh                        # bias = speed_impatience
+#   bash scripts/run_memory_frameworks.sh resource_frugality     # override bias
 #   PROVIDER=openrouter MODEL=google/gemini-3.1-pro-preview \
-#       bash scripts/run_memory_architectures.sh speed_impatience
-#   MEM_ARCHS="mem0" bash scripts/run_memory_architectures.sh       # one architecture
-#   RESUME=1 bash scripts/run_memory_architectures.sh               # reuse non-'na' cells
+#       bash scripts/run_memory_frameworks.sh speed_impatience
+#   MEM_ARCHS="mem0" bash scripts/run_memory_frameworks.sh       # one architecture
+#   RESUME=1 bash scripts/run_memory_frameworks.sh               # reuse non-'na' cells
 
 set -u
 

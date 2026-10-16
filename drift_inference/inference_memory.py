@@ -1,34 +1,25 @@
 #!/usr/bin/env python3
-"""Setting 2 — memory architectures.
+"""Setting 2 — memory frameworks.
 
-Instead of injecting the memory sets verbatim, the system prompt is filled with
-whatever a real memory architecture actually retrieved for the professional
-query: the conversations were stored by mem0, MemPalace or SimpleMem, and those
-systems decided on their own what to keep and what to surface. This is the
-deployment-realistic setting, and it measures drift that survives a real
-store-and-retrieve round trip.
+The system prompt is filled with what mem0, MemPalace or SimpleMem actually
+retrieved for the professional query, rather than the memory sets verbatim.
 
-Conditions match the direct setting, with the memory text swapped in:
-
-    base      M_u = {}                        no user memory at all
-    neutral   M_base union retrieved(M_n)     what the system returned for the neutral conversations
-    biased    M_base union retrieved(M_b)     what the system returned for the biased conversations
+    base      no user memory
+    neutral   base memory + retrieved neutral memories
+    biased    base memory + retrieved biased memories
 
 Input : data/memories/<mem_arch>/<bias>.json   (from the Hugging Face dataset)
 Output: results/inference/<mem_arch>/<bias>_<model>_<reasoning>.json
-        every original column plus base_responses, neutral_memory_responses,
-        biased_memory_responses — each a list of k tool-call argument dicts
-        (or the string "na" where the model returned no parseable call).
+        adds base_responses, neutral_memory_responses, biased_memory_responses —
+        each a list of k tool-call argument dicts, or "na" if the call failed.
 
 Usage:
     python -m drift_inference.inference_memory \\
         --provider openai --bias speed_impatience --model gpt-5.4 \\
         --reasoning medium --mem_arch mem0
 
-    # reuse successful calls, re-run only the "na" slots
-    python -m drift_inference.inference_memory \\
-        --provider openai --bias speed_impatience --model gpt-5.4 \\
-        --mem_arch mem0 --resume
+    # re-run only the "na" slots
+    ... --mem_arch mem0 --resume
 """
 
 import argparse
@@ -175,7 +166,7 @@ def main():
         "--mem_arch",
         required=True,
         choices=MEMORY_ARCHITECTURES,
-        help="Memory architecture whose retrieved memories to inject.",
+        help="Memory framework whose retrieved memories to inject.",
     )
     parser.add_argument(
         "--conditions",

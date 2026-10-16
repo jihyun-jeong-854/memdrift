@@ -1,30 +1,19 @@
 """Canonical filesystem layout for MemDrift.
 
 Every stage reads and writes through this module, so no absolute path is baked
-into the code. Override either root with an environment variable:
+into the code. Override either root:
 
     MEMDRIFT_DATA     benchmark artifacts   (default: <repo>/data)
     MEMDRIFT_RESULTS  run outputs           (default: <repo>/results)
 
-Data layout — the artifacts described in the paper's Benchmark Construction
-section (tool schema, user prompt, base/neutral/biased memory sets, success
-criteria), one file per bias dimension:
+    data/scenarios/<bias>.json             105 entries, 21 per bias dimension
+    data/rubrics/all_params/<bias>.json    degradation-rate rubric
+    data/conversations/<bias>.json         + biased_conversation
+    data/conversations/<bias>_neutral.json + neutral_conversation
+    data/memories/<mem_arch>/<bias>.json   + {biased,neutral}_retrieved_memory
 
-    data/scenarios/<bias>.json                   105 verified entries (21 per bias),
-                                                 incl. top_2_critical annotations
-    data/rubrics/all_params/<bias>.json          objective rubric, every critical parameter
-    data/conversations/<bias>.json               + biased_conversation
-    data/conversations/<bias>_neutral.json       + neutral_conversation
-    data/memories/<mem_arch>/<bias>.json         + {biased,neutral}_retrieved_memory
-
-Results layout:
-
-    results/construction_logs/<bias>/<domain>/<scenario>/attempt_<n>.txt
-    results/inference/direct/<bias>_<model>_<reasoning>.json
-    results/inference/<mem_arch>/<bias>_<model>_<reasoning>.json
-    results/scores/direct/<bias>_<model>_<reasoning>.json
-    results/scores/<mem_arch>/<bias>_<model>_<reasoning>.json
-    results/memory_logs/<mem_arch>/<bias>/<domain>_<scenario>_<attempt>.json
+    results/inference/<setting>/<bias>_<model>_<reasoning>.json
+    results/scores/objective/<variant>/
 """
 
 import os
@@ -32,7 +21,6 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
-CONFIG_DIR = REPO_ROOT / "configs"
 
 DATA_ROOT = Path(os.getenv("MEMDRIFT_DATA", REPO_ROOT / "data")).expanduser()
 SCENARIO_DIR = DATA_ROOT / "scenarios"
@@ -41,12 +29,10 @@ MEMORY_DIR = DATA_ROOT / "memories"
 RUBRIC_DIR = DATA_ROOT / "rubrics"
 
 RESULTS_ROOT = Path(os.getenv("MEMDRIFT_RESULTS", REPO_ROOT / "results")).expanduser()
-CONSTRUCTION_LOG_DIR = RESULTS_ROOT / "construction_logs"
 INFERENCE_DIR = RESULTS_ROOT / "inference"
 SCORE_DIR = RESULTS_ROOT / "scores"
-MEMORY_LOG_DIR = RESULTS_ROOT / "memory_logs"
 
-# The three memory architectures evaluated in the paper.
+# The three memory frameworks evaluated in the paper.
 MEMORY_ARCHITECTURES = ("mem0", "mempalace", "simplemem")
 
 # The five bias dimensions (configs/bias_dimensions.json).
@@ -58,16 +44,6 @@ BIAS_DIMENSIONS = (
     "autonomy_self_reliance",
 )
 
-# The seven professional domains.
-DOMAINS = (
-    "healthcare",
-    "finance",
-    "legal",
-    "education",
-    "ecommerce",
-    "software_infrastructure",
-    "marketing",
-)
 
 ENV_FILE = REPO_ROOT / ".env"
 

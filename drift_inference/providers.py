@@ -1,24 +1,17 @@
-"""Provider-agnostic tool-calling layer shared by both evaluation settings.
+"""Provider-agnostic tool-calling layer shared by both settings.
 
-The benchmark stores each tool schema in OpenAI Responses API shape (flat:
-`{"name", "description", "parameters", "strict"}`). This module reshapes it per
-provider, forces a tool call, extracts the arguments, and retries when a model
-returns no parseable call.
-
-Supported providers:
+Reshapes the benchmark's OpenAI-shaped tool schema per provider, forces a tool
+call, extracts the arguments, and retries when none comes back.
 
     openai      Responses API; gpt-5.x rejects tools + reasoning_effort on
-                Chat Completions, so everything goes through /v1/responses
-    anthropic   Messages API; with extended thinking enabled Anthropic forbids
-                tool_choice="any", so forcing is dropped and BASE_SYSTEM carries
-                the pressure to emit a call
-    togetherai  Chat Completions + json_schema response_format as a second
-                channel the model can satisfy
-    openrouter  Chat Completions; Gemini needs its JSON Schema sanitised and
+                Chat Completions
+    anthropic   Messages API; extended thinking forbids tool_choice="any", so
+                forcing is dropped and BASE_SYSTEM carries the pressure
+    togetherai  Chat Completions + json_schema response_format
+    openrouter  Chat Completions; Gemini needs its JSON Schema sanitised,
                 Minimax needs the reasoning extra_body omitted
 
-The `reasoning` flag is unified across providers as "none" or "medium"; each
-`_call_*` translates it into that provider's own control.
+`reasoning` is unified as "none" or "medium" and translated per provider.
 """
 
 import asyncio
